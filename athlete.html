@@ -1,0 +1,371 @@
+--- START OF FILE athlete.html ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athletes - Khelo India</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="logo" class="logo">
+        <div class="hamburger" onclick="toggleNav()">☰</div>
+        <nav>
+            <ul id="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./discipline.html">Disciplines</a></li>
+                <li><a href="./khelon.html">Khelon</a></li>
+                <li><a href="./athlete.html">Athletes</a></li>
+                <li><a href="./events.html">Events</a></li>
+                <li>
+                    <a>Resources</a>
+                    <ul class="dropdown">
+                        <li><a href="resources/ParaGames2023.pdf">Khelo India Para Games 2023</a></li>
+                        <li><a href="resources/UniversityGames2023.pdf">Khelo India University Games 2023</a></li>
+                        <li><a href="resources/WinterGames2024.pdf">Khelo India Winter Games 2024</a></li>
+                        <li><a href="resources/YouthGames2023.pdf">Khelo India Youth Games 2023 2.0</a></li>
+                        <li><a href="resources/YouthGames20232.0.pdf">Khelo India Youth Games 2023</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <button id="logoutButton" style="display: none; background-color: #f44336; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Logout</button>
+        <a href="./register.html" class="register"><button>Get Involved</button></a>
+
+    </header>
+    <main>
+        <section class="intro">
+            <div class="container">
+                <h1>KHELO INDIA ATHLETES</h1>
+                <p>Explore the stars of Khelo India! Meet the talented athletes making our nation proud on the sporting stage.</p>
+            </div>
+        </section>
+
+        <section class="athlete-filter-section">
+            <div class="container">
+                <h2>Filter Athletes By Sport</h2>
+                <div class="filter-buttons-container">
+                    <div class="filter-buttons">
+                        <button class="filter-button active" data-filter="all">All Sports</button>
+                        <button class="filter-button" data-filter="Badminton">Badminton</button>
+                        <button class="filter-button" data-filter="Weightlifting">Weightlifting</button>
+                        <button class="filter-button" data-filter="Hockey">Hockey</button>
+                        <button class="filter-button" data-filter="Swimming">Swimming</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-athletes">
+            <div class="container">
+                <div class="athletes-grid" id="athletes-grid">
+                    <!-- Athlete cards will be added here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="add-athlete-section" style="display: none;">
+            <div class="container">
+                <h2>Add New Athlete</h2>
+                <form id="addAthleteForm">
+                    <label for="athleteName">Athlete Name:</label>
+                    <input type="text" id="athleteName" name="athleteName" required>
+
+                    <label for="athleteSport">Sport:</label>
+                    <input type="text" id="athleteSport" name="athleteSport" required>
+
+                    <label for="athleteImage">Image URL:</label>
+                    <input type="url" id="athleteImage" name="athleteImage" required>
+
+                    <label for="athleteAchievements">Achievements:</label>
+                    <textarea id="athleteAchievements" name="athleteAchievements" rows="4"></textarea>
+
+                    <label for="athleteQuote">Quote:</label>
+                    <textarea id="athleteQuote" name="athleteQuote" rows="2"></textarea>
+
+                    <button type="submit">Add Athlete</button>
+                </form>
+            </div>
+        </section>
+
+        <div id="context-menu" style="display: none; position: fixed;">
+            <button id="editButton">Edit Athlete</button>
+            <button id="removeButton">Remove Athlete</button>
+        </div>
+
+        <div id="edit-athlete-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button">×</span>
+                <h2>Edit Athlete Details</h2>
+                <form id="editAthleteForm">
+                    <input type="hidden" id="editAthleteIndex">
+                    <label for="editAthleteName">Athlete Name:</label>
+                    <input type="text" id="editAthleteName" name="editAthleteName" required>
+
+                    <label for="editAthleteSport">Sport:</label>
+                    <input type="text" id="editAthleteSport" name="editAthleteSport" required>
+
+                    <label for="editAthleteImage">Image URL:</label>
+                    <input type="url" id="editAthleteImage" name="editAthleteImage" required>
+
+                    <label for="editAthleteAchievements">Achievements:</label>
+                    <textarea id="editAthleteAchievements" name="editAthleteAchievements" rows="4"></textarea>
+
+                    <label for="editAthleteQuote">Quote:</label>
+                    <textarea id="editAthleteQuote" name="editAthleteQuote" rows="2"></textarea>
+
+                    <button type="submit">Save Changes</button>
+                    <button type="button" class="cancel-button">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </main>
+        <footer class="khelo-india-footer">
+            <div class="footer-container">
+                <div class="social-info">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><img
+                                src="images/fb.png"
+                                alt="Facebook"></a>
+                        <a href="#" class="social-icon"><img
+                                src="images/twitter.webp"
+                                alt="Twitter"></a>
+                        <a href="#" class="social-icon"><img
+                                src="images/insta.png"
+                                alt="Instagram"></a>
+                        <a href="#" class="social-icon"><img
+                                src="images/yt.webp"
+                                alt="YouTube"></a>
+                    </div>
+                    <div class="contact-info">
+                        <p>Tel No.: 01124364243</p>
+                        <p>Email id: kheloindia.div@gov.in</p>
+                    </div>
+                </div>
+                <div class="footer-menu">
+                    <a
+                        href="https://kheloindia.gov.in/privacypolicy.html">PRIVACY
+                        POLICY</a>
+                </div>
+
+            </div>
+            <div class="copyright-area">
+                <p>© Copyright Khelo India 2022. All Rights
+                    Reserved.</p>
+            </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const athletesGrid = document.getElementById('athletes-grid');
+            const addAthleteFormSection = document.querySelector('.add-athlete-section');
+            const addAthleteForm = document.getElementById('addAthleteForm');
+            const contextMenu = document.getElementById('context-menu');
+            const editModal = document.getElementById('edit-athlete-modal');
+            const editAthleteForm = document.getElementById('editAthleteForm');
+            const closeEditModalButton = editModal.querySelector('.close-button');
+            const cancelEditButton = editModal.querySelector('.cancel-button');
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const logoutLink = document.getElementById('logoutLink');
+            const logoutButtonHeader = document.getElementById('logoutButton'); // ADDED LINE
+
+            let athletes = JSON.parse(localStorage.getItem('athletes')) || [];
+            let selectedItemIndex = null;
+
+            checkLoginStatus();
+            displayAthletes(athletes);
+
+            function checkLoginStatus() {
+                const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+                const isAdmin = localStorage.getItem('isAdmin') === 'true';
+
+                if (isLoggedIn && isAdmin) {
+                    addAthleteFormSection.style.display = 'block';
+                    contextMenu.addEventListener('click', contextMenuClickHandler);
+                    logoutButtonHeader.style.display = 'block'; // CHANGED LINE
+                } else {
+                    addAthleteFormSection.style.display = 'none';
+                    contextMenu.removeEventListener('click', contextMenuClickHandler);
+                    logoutButtonHeader.style.display = 'none'; // CHANGED LINE
+                }
+            }
+
+            function contextMenuClickHandler(event) {
+                if (event.target.id === 'editButton') {
+                    editSelectedItem();
+                } else if (event.target.id === 'removeButton') {
+                    removeSelectedItem();
+                }
+            }
+
+            function showContextMenu(event, index) {
+                event.preventDefault();
+                contextMenu.style.left = event.pageX + 'px';
+                contextMenu.style.top = event.pageY + 'px';
+                contextMenu.style.display = 'block';
+                selectedItemIndex = index;
+            }
+
+            function hideContextMenu() {
+                contextMenu.style.display = 'none';
+                selectedItemIndex = null;
+            }
+
+            function editSelectedItem() {
+                if (selectedItemIndex !== null) {
+                    editAthlete(selectedItemIndex);
+                }
+                hideContextMenu();
+            }
+
+            function removeSelectedItem() {
+                if (selectedItemIndex !== null) {
+                    removeAthlete(selectedItemIndex);
+                }
+                hideContextMenu();
+            }
+
+            document.addEventListener('click', function(e) {
+                if (!contextMenu.contains(e.target)) {
+                    hideContextMenu();
+                }
+            });
+
+            function displayAthletes(athletesToDisplay) {
+                athletesGrid.innerHTML = '';
+                athletesToDisplay.forEach((athlete, index) => {
+                    const athleteCard = document.createElement('div');
+                    athleteCard.classList.add('athlete-card');
+                    athleteCard.dataset.sport = athlete.sport;
+                    athleteCard.innerHTML = `
+                        <img src="${athlete.imageUrl}" alt="${athlete.name}">
+                        <h3>${athlete.name}</h3>
+                        <p>Sport: ${athlete.sport}</p>
+                        <p>Achievements:</p>
+                        <ul>${athlete.achievements.split('\n').map(item => `<li>${item}</li>`).join('')}</ul>
+                        <p class="quote">${athlete.quote}</p>
+                    `;
+                    athleteCard.addEventListener('contextmenu', (e) => {
+                        if (localStorage.getItem('isLoggedIn') === 'true' && localStorage.getItem('isAdmin') === 'true') {
+                            showContextMenu(e, index);
+                        }
+                    });
+                    athletesGrid.appendChild(athleteCard);
+                });
+            }
+
+            function removeAthlete(index) {
+                athletes.splice(index, 1);
+                localStorage.setItem('athletes', JSON.stringify(athletes));
+                applyFilter();
+            }
+
+            function editAthlete(index) {
+                const athlete = athletes[index];
+                document.getElementById('editAthleteIndex').value = index;
+                document.getElementById('editAthleteName').value = athlete.name;
+                document.getElementById('editAthleteSport').value = athlete.sport;
+                document.getElementById('editAthleteImage').value = athlete.imageUrl;
+                document.getElementById('editAthleteAchievements').value = athlete.achievements;
+                document.getElementById('editAthleteQuote').value = athlete.quote;
+                editModal.style.display = 'block';
+            }
+
+            closeEditModalButton.addEventListener('click', function() {
+                editModal.style.display = 'none';
+            });
+
+            cancelEditButton.addEventListener('click', function() {
+                editModal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target === editModal) {
+                    editModal.style.display = 'none';
+                }
+            });
+
+            editAthleteForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const index = parseInt(document.getElementById('editAthleteIndex').value);
+                athletes[index].name = document.getElementById('editAthleteName').value;
+                athletes[index].sport = document.getElementById('editAthleteSport').value;
+                athletes[index].imageUrl = document.getElementById('editAthleteImage').value;
+                athletes[index].achievements = document.getElementById('editAthleteAchievements').value;
+                athletes[index].quote = document.getElementById('editAthleteQuote').value;
+                localStorage.setItem('athletes', JSON.stringify(athletes));
+                applyFilter();
+                editModal.style.display = 'none';
+            });
+
+            addAthleteForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const athleteName = document.getElementById('athleteName').value;
+                const athleteSport = document.getElementById('athleteSport').value;
+                const athleteImage = document.getElementById('athleteImage').value;
+                const athleteAchievements = document.getElementById('athleteAchievements').value;
+                const athleteQuote = document.getElementById('athleteQuote').value;
+
+                const newAthlete = {
+                    name: athleteName,
+                    sport: athleteSport,
+                    imageUrl: athleteImage,
+                    achievements: athleteAchievements,
+                    quote: athleteQuote
+                };
+
+                athletes.push(newAthlete);
+                localStorage.setItem('athletes', JSON.stringify(athletes));
+                applyFilter(); // CALLING applyFilter HERE TO REFRESH THE GRID
+                addAthleteForm.reset();
+            });
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    applyFilter();
+                });
+            });
+
+            function applyFilter() {
+                const activeFilter = document.querySelector('.filter-button.active').dataset.filter;
+                const filteredAthletes = activeFilter === 'all' ? athletes : athletes.filter(athlete => athlete.sport === activeFilter);
+                displayAthletes(filteredAthletes);
+            }
+
+            if (logoutLink) {
+                logoutLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('isAdmin'); // Also remove isAdmin flag
+                    checkLoginStatus();
+                    window.location.href = 'login.html';
+                });
+            }
+
+            // Logout button in header
+            const logoutButton = document.getElementById('logoutButton');
+            if (logoutButton) {
+                logoutButton.addEventListener('click', function() {
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('isAdmin');
+                    checkLoginStatus();
+                    window.location.href = 'login.html';
+                });
+            }
+
+
+            checkLoginStatus();
+            displayAthletes(athletes);
+        });
+
+        function toggleNav() {
+            const nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        }
+        </script>
+</body>
+</html>
+--- END OF FILE athlete.html ---

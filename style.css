@@ -1,0 +1,1422 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bowlby+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bowlby+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+ID+Guides&family=Rubik+Mono+One&family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Audiowide&family=Bowlby+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+ID+Guides&family=Rubik+Mono+One&family=Unbounded:wght@200..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat",sans-serif ;
+    font-size: 20px;
+}
+
+body{
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0%;
+    padding: 0%;
+    object-fit: fill;
+    width: 100%;
+}
+li ,a  ,button{
+    font-weight: 500;
+    font-size: 17px;
+    color:aliceblue;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content:space-between;
+    padding: 15px 10%;
+    background-color: cornflowerblue;
+}
+
+ul{
+    list-style-type: none;
+}
+.logo{
+    height: 150px;
+    width: 150px;
+}
+/* menubar*/
+.menubar{
+    visibility: hidden;
+}
+.menu_logo{
+    height: 30px;
+    width: auto;
+}
+.menubar li{
+    color: white;
+    margin: 10px;
+    padding: 5px;
+}
+.menubar_dropdown{
+    display: none;
+    position: absolute;
+    background-color: rgb(70, 123, 222);
+    text-align: left;
+    margin: 10px;
+    z-index: 1;
+    border-radius: 10px;
+}
+.icons{
+    height: 25px;
+    width: auto;
+    float: left;
+}
+
+#nav>li{
+    display: inline-block;
+    padding: 0% 15px;
+    font-size: 20px;
+    font-weight: 1000 ;
+    border-radius: 10px;
+    padding: 3px;
+    margin-left: 12px;
+}
+#nav>li:hover{
+    background-color: rgb(238, 142, 87);
+    transition: background-color 0.4s, transform 0.3s;
+}
+button{
+    background-color: rgb(253, 11, 59);
+    border-radius: 20px;
+    padding: 10% 15%;
+    border: none;
+}
+button:hover{
+    padding: 11% 16%;
+    background-color: rgb(253, 11, 59);
+    box-shadow: 4px 4px 5px rgb(113, 25, 43) ;
+}
+
+a{
+    font-size: large;
+}
+#register,#login-button{
+    background-color:rgb(253, 11, 59);
+    border-radius: 20px;
+    padding:10px;
+    color: white;
+    border-style: none;
+    font-size:17px;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgb(70, 123, 222);
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+#nav>li:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.dropdown li a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.dropdown li:hover {
+    background-color: rgb(238, 142, 87);
+}
+
+.title-text{
+    font-family: "Bowlby One", sans-serif;
+    font-weight:300;
+    font-style: normal;
+    text-transform:uppercase;
+    color: rgb(44, 197, 44);
+    text-align: center;
+    background-image: url(images/mainimage.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(100%);
+    height: 400px;
+    width: auto;
+    padding-top: 70px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*login page*/
+.login-page h2{
+    text-align: center;
+    color: white;
+    font-size: 26px;
+}
+.login-page{
+    display: flex;
+    justify-content: center;
+}
+.login-form{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    flex-flow: column;
+    background-color: hsla(1, 38%, 63%, 0.3);
+    padding: 20px;
+    height: 300px;
+    width: 500px;
+    box-shadow: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255, 0.7) ;
+}
+.login-page input{
+    padding: 3px;
+    border-radius: 10px;
+    border-color: cornsilk;
+}
+.login-page{
+    color: aliceblue;
+}
+
+/*home*/
+.basket{
+    display: flex;
+    justify-content: space-evenly;
+    height: 550px;
+    width: auto;
+    padding-left: 50px;
+    float: left;
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 35px;
+}
+
+#about{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    justify-content:space-between;
+    color:black;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 25px;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+#about>p{
+    margin: 17px;
+    width: 700px;
+    height: auto;
+}
+
+span {
+    font-family: "Archivo Black", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 35px;
+  }
+
+#homevid{
+    width: 550px;
+    height: auto;
+    margin: 30px;
+}
+#homevid:hover{
+    width:555px;
+    box-shadow: 10px 10px 15px rgb(39, 53, 62);
+    transition: box-shadow 0.4s, transform 0.3s;
+}
+#about2{
+    width: 850px;
+    height: 400px;
+    margin: 20px;
+    text-align: center;
+}
+.homesection{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/* --- Featured Disciplines Section --- */
+#featured-disciplines {
+    padding: 50px 0;
+    text-align: center;
+}
+.dcontainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.dcontainer>h2 {
+    display: block;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: black; /* Gold section heading */
+}
+.dcontainer>a{
+    text-decoration: none;
+    color:black;
+    background-color: #68d072;
+    padding: 10px 20px;
+    height: auto;
+    width: 120px;
+    border-radius: 20px;
+    margin-left: 22px;
+}
+
+.disciplines-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    margin: 20px;
+}
+
+.discipline-card {
+    min-width: 250px;
+    background-color: #dbfbdc; /* Dark card background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.discipline-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.discipline-card h3 {
+    font-size: 1.5rem;
+    color:coral; /* Gold card heading */
+    margin-bottom: 10px;
+}
+
+.discipline-card p {
+    font-size: 0.9rem;
+}
+/*about page*/
+.aboutimg{
+    width: 600px;
+    height: auto;
+    margin: 20px;
+    border-radius:25px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+.aboutpara{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+.text{
+    text-align: center;
+    color: black;
+}
+hr{
+    height: 10px;
+    width: 800px;
+    margin: 20px;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+#aboutlist>li{
+    color: white;
+    margin: 10px;
+    font-size: 18px;
+    font-weight:500;
+}
+#aboutlist{
+    text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    background-color: coral;
+    width: 400px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+#aboutlist:hover{
+    width:405px;
+    background-color: rgb(215, 88, 38);
+    box-shadow: 10px 10px 15px rgb(99, 69, 40);
+    transition: box-shadow 0.4s, transform 0.3s;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.cards>div{
+    width: 400px;
+    height:auto;
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+}
+.cards>div:hover{
+    width: 405px;
+    height: auto;
+    background-color: rgb(48, 94, 180);
+    box-shadow: 10px 10px 15px rgb(54, 75, 89);
+    transition: box-shadow 0.4s, transform 0.3s;
+}
+
+/*discipline page*/
+.discipline-container>div{
+    width: 270px;
+    height: auto;
+    color: white;
+    background-color:coral;
+    margin: 15px;
+    padding: 30px;
+    border-radius: 30px;
+}
+.discipline-container>div:hover{
+    width: 275px;
+    background-color: rgb(215, 88, 38);
+    box-shadow: 10px 10px 15px rgb(99, 69, 40);
+    transition: box-shadow 0.4s, transform 0.3s;
+}
+.discipline-container>div>img{
+    width: 100px;
+}
+.discipline-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.discipline-img{
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/*training page*/
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    animation: slide 8s infinite;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 3s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
+.tline{
+    height: 20px;
+    width: 800px;
+    margin: 20px;
+    background-color: coral;
+    border: none;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+h2{
+    text-align: center;
+}
+.row{
+    background-color: rgba(246, 155, 122, 0.7);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+.row:hover{
+    width:405px;
+    padding: 13px;
+    background-color: coral;
+    box-shadow: 10px 10px 15px rgb(99, 69, 40);
+    transition: box-shadow 0.4s, transform 0.3s;
+}
+.n1{
+    width: 1200px;
+}
+.n2{
+    width: 1000px;
+}
+.n3{
+    width: 800px;
+}
+.n4{
+    width: 600px;
+}
+.training-bg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/trainingbg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1200px;
+}
+/*footer section*/
+.khelo-india-footer {
+    background-color: cornflowerblue; /* Blue background */
+    color: #fff; /* White text */
+    padding: 20px 0;
+    font-family: sans-serif; /* Default font */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+  }
+
+  .footer-container {
+      width: 80%;
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px 0;
+
+  }
+
+  .social-info, .khelo-india-logos {
+    display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+  }
+
+  .footer-menu {
+      margin-bottom: 20px;
+  }
+  .footer-menu a {
+      color: #fff;
+      text-decoration: none;
+  }
+
+  .social-icons {
+    display: flex;
+      margin-bottom: 10px;
+  }
+
+  .social-icon {
+    margin-right: 10px;
+    display: block;
+  }
+
+  .social-icon img {
+      width: 30px;
+      height: 30px;
+
+      border-radius: 4px;
+      padding: 3px;
+  }
+
+  .contact-info p {
+    margin: 5px 0;
+  }
+
+  .khelo-india-logos img {
+    height: 50px;
+      margin-right: 15px;
+  }
+  .copyright-area {
+      background-color: #161e2d;
+      padding: 10px 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9em;
+  }
+
+  .scroll-top {
+  position: absolute;
+      bottom: 30px;
+      right: 40px;
+  }
+
+  .scroll-to-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background-color: #c16e2e;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .scroll-to-top:hover {
+      background-color: #b65f22;
+  }
+  .scroll-to-top svg{
+    height: 25px;
+    width: 25px;
+  }
+  /*get involved page*/
+  .getinvolvebg{
+
+    background-image: url(images/volleyball.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    background-position: center;
+    margin-bottom: 25px;
+  }
+  .getinvolvebg p{
+     font-size: 80px;
+    color: white;
+    margin-left: 30px;
+    font-weight: 700;
+
+  }
+  .getcontainer{
+    width: 1400px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+  .getimage{
+    width: 120px;
+    height: auto;
+    border-radius: 30px;
+  }
+  .getinfo{
+    width: 800px;
+    height: auto;
+  }
+  .getcards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .getcards div{
+    color: white;
+    width: 500px;
+    height: auto;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 20px;
+    background-color: coral;
+  }
+  .getcards>div:hover{
+    width:505px;
+
+    background-color: rgb(238, 97, 45);
+    box-shadow: 10px 10px 15px rgb(99, 69, 40);
+    transition: box-shadow 0.4s, transform 0.3s;
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* --- Register Page Styles --- */
+.form-section {
+    padding: 50px 0;
+    background-image: url(images/registerbg.avif); /* Section background */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-box {
+    background-color: #6090dc; /* Dark form box background */
+    color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-box h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255); /* Gold form box heading */
+}
+
+.form-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.form-box input[type="text"],
+.form-box input[type="password"],
+.form-box input[type="number"],
+.form-box input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-image: url(images/registerbg.avif); /* Darker form input background */
+    color: #000000;
+
+}
+
+.form-box #register {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #e73d49; /* Gold register button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-box #register:hover {
+    background-color: #fb1014;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.form-box #login {
+    font-size: 0.9rem;
+    color: #2509bf; /* Gold login link */
+    text-decoration: underline;
+}
+
+.registration-benefits {
+    padding: 30px 0;
+    background-color: coral; /* Section background */
+    text-align: center;
+}
+
+.registration-benefits h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Gold registration benefits heading */
+}
+
+.registration-benefits ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.registration-benefits li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+/* --- Login Page Styles --- */
+.login-section {
+    padding: 50px 0;
+    background-image: url(images/registerbg.avif); /* Section background */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-page {
+    background-color: #68a1f8; /* Dark login page background */
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    margin: 0 auto;
+}
+.login-form {
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    flex-flow: column;
+    padding: 20px;
+    height: 300px;
+    width: 500px;
+    box-shadow: rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255, 0.7);
+    background-color: transparent;
+
+}
+.login-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffffff; /* Gold login form heading */
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-image: url(images/registerbg.avif); /* Darker login form input background */
+    color: #000000;
+}
+
+.login-form #login-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #ee5858; /* Gold login button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form #login-button:hover {
+    background-color: #f80909; /* Darker gold on hover */
+}
+#loginForm>p>a{
+    color: rgb(3, 36, 115);
+    text-decoration: underline;
+}
+
+/* --- Error Message Style --- */
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+}
+
+.error-message.show {
+    display: block;
+}
+/* athletes page */
+
+/* --- Athlete Page Styles (Add these to the END of style.css) --- */
+
+/* Section for Athlete Filters - above the athlete grid */
+.athlete-filter-section {
+    background-color: #f0f0f0; /* Light grey section background */
+    padding: 20px 0; /* Vertical padding to separate from other sections */
+    margin-bottom: 20px; /* Space below filter section */
+}
+
+.athlete-filter-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.athlete-filter-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Increased margin */
+    color: #333;
+    font-size: 1.7rem; /* Slightly larger heading */
+}
+
+/* ===  Filter Buttons Container - Header Style Arrangement  === */
+.filter-buttons-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center;
+    background-color: #fff; /* White background for filter bar */
+    padding: 15px 20px; /* Increased horizontal padding */
+    border-radius: 5px; /* Less rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow to lift it */
+    margin-bottom: 20px; /* Spacing below filter bar */
+    border: 1px solid #ddd; /* Light border */
+}
+
+/* Filter Buttons Container (Inner - for button arrangement) */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Increased gap between buttons */
+    flex-wrap: wrap;
+     max-width: 900px; /*  Increased max width for buttons */
+}
+
+.filter-button {
+    background-color:  #e0e0e0; /* Light grey buttons */
+    color: #555; /* Darker text color */
+    border: none;
+    padding: 10px 20px; /* Increased padding */
+    border-radius: 20px; /* More rounded buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for color too */
+    font-size: 1.1rem; /* Slightly larger font size */
+    font-weight: 500; /* Semi-bold font weight */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /*  Subtle button shadow */
+}
+
+.filter-button:hover {
+    background-color: #d0d0d0; /* Slightly darker grey on hover */
+    color: #333; /* Darker text on hover */
+}
+
+.filter-button.active {
+    background-color: cornflowerblue; /* Active state color - keep blue */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* More prominent shadow for active */
+    transform: scale(1.0); /* Reset scale for active state */ /* Added this line */
+}
+
+/* Grid for displaying athlete cards */
+.athletes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Wider cards */
+    gap: 25px; /* Increased gap */
+}
+
+/* Individual Athlete Card Styles */
+.athlete-card {
+    background-color: #fff;
+    border-radius: 10px; /* More rounded card corners */
+    overflow: hidden;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smoother transition */
+    display: flex; /* Enable flexbox for card content */
+    flex-direction: column; /* Stack image and text vertically */
+}
+
+.athlete-card:hover {
+    transform: translateY(-7px); /* More pronounced lift on hover */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25); /* Stronger hover shadow */
+}
+.athlete-card img {
+    width: 100%;
+    height: 220px; /* Increased image height */
+    object-fit:contain; /* ADDED or MODIFIED LINE - IMPORTANT! */
+    border-radius: 10px 10px 0 0; /* Rounded corners on top only */
+    margin-bottom: 0; /* Remove margin below image */
+}
+
+
+/* Container for Athlete Card Text Content */
+.athlete-card-content {
+    padding: 20px; /* Padding around text content */
+    text-align: left; /* Align text to the left within the card */
+    flex-grow: 1; /* Allow content to take up remaining card height */
+    display: flex; /* Flexbox for vertical alignment of content */
+    flex-direction: column; /* Stack content within card content */
+}
+
+.athlete-card h3 {
+    font-size: 1.4rem; /* Larger name font */
+    margin-bottom: 0.7rem; /* Increased margin */
+    color: #222; /* Darker name color */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.athlete-card p {
+    font-size: 1.05rem; /* Slightly larger text */
+    color: #0a0404; /* Darker text color */
+    margin-bottom: 0.7rem;
+    line-height: 1.5; /* Improved line height */
+}
+
+.athlete-card em {
+    font-style: italic;
+    color: #190e0e; /* Slightly darker quote color */
+}
+
+/* --- Add Athlete Form Styles --- */
+
+.add-athlete-section { /* Updated section class name */
+    padding: 40px 0; /* Increased padding */
+    background-color: #f9f9f9; /* Lighter background */
+    border-top: 1px solid #eee; /* Light top border to separate sections */
+}
+
+.add-athlete-section .container { /* Updated section class name */
+     max-width: 700px; /* Wider form container */
+     margin: auto;
+}
+
+.add-athlete-section h2 { /* Updated section class name */
+    text-align: center;
+    margin-bottom: 2rem; /* Increased margin */
+    color: #333;
+    font-size: 1.8rem; /* Slightly larger heading */
+}
+
+.add-athlete-section label { /* Updated section class name */
+    display: block;
+    margin-bottom: 0.5rem; /* Increased margin */
+    color: #555;
+    font-weight: 500; /* Semi-bold label text */
+}
+
+.add-athlete-section input[type="text"], /* Updated section class name */
+.add-athlete-section input[type="url"], /* Updated section class name */
+.add-athlete-section textarea { /* Updated section class name */
+    width: 100%;
+    padding: 12px; /* Increased padding */
+    margin-bottom: 1.5rem; /* Increased margin */
+    border: 1px solid #ccc; /* Slightly darker border */
+    border-radius: 5px;
+     box-sizing: border-box;
+     font-size: 1rem; /* Consistent input font size */
+}
+
+.add-athlete-section textarea { /* Updated section class name */
+    resize: vertical;
+    min-height: 100px; /* Minimum height for textarea */
+}
+
+.add-athlete-section button { /* Updated section class name */
+    background-color: cornflowerblue;
+    color: white;
+    padding: 12px 25px; /* Increased button padding */
+    border: none;
+    border-radius: 25px; /* More rounded button corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform transition */
+    font-size: 1.1rem; /* Slightly larger button text */
+    font-weight: 600; /* Bold button text */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /*  Button shadow */
+}
+
+.add-athlete-section button:hover { /* Updated section class name */
+    background-color: #4169E1;
+    transform: scale(1.03); /* Slight scale up on hover */
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25); /*  Stronger hover shadow */
+}
+
+/* --- Context Menu Styles --- */
+#context-menu {
+  position: fixed;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+  padding: 5px 0; /* Remove horizontal padding */
+  display: none; /* Hidden by default */
+}
+
+#context-menu button {
+  display: block;
+  width: 100%; /* Full width */
+  text-align: left;
+  padding: 8px 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+#context-menu button:hover {
+  background-color: #eee;
+}
+
+/* --- Modal Styles --- */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px; /* Increased padding */
+    border-radius: 12px; /* More rounded modal corners */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25); /* More pronounced shadow */
+    max-width: 600px; /* Wider modal */
+    width: 90%; /* Take up more width on smaller screens */
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px; /* Adjusted position */
+    right: 15px; /* Adjusted position */
+    font-size: 1.8rem; /* Larger close button */
+    cursor: pointer;
+    color: #777; /* Lighter close button color */
+     font-weight: bold;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+/* --- Events Page Form Styles --- */
+
+.add-event-form { /* Style for the Add Event form section */
+    padding: 40px 0;
+    background-color: #f9f9f9; /* Lighter background */
+    border-top: 1px solid #eee;
+}
+
+.add-event-form .container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.add-event-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.add-event-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+#events-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* You might also want to style the individual event cards inside the grid */
+.event-card {
+    width: 300px; /* Example width for each event card - adjust as needed */
+    /* ... other styles for event-card (background, border, padding, etc.) ... */
+}
+
+.add-event-form input[type="text"],
+.add-event-form input[type="date"],
+.add-event-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.add-event-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.add-event-form button[type="submit"] {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.add-event-form button[type="submit"]:hover {
+    background-color: #4169E1;
+    transform: scale(1.03);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+}
+
+/* --- Edit Event Modal Styles (Reusing/Adapting modal styles) --- */
+
+#edit-event-modal .modal-content h2 { /* Targeting modal heading */
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.9rem;
+}
+
+#edit-event-modal .modal-content label { /* Targeting modal form labels */
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+#edit-event-modal .modal-content input[type="text"],
+#edit-event-modal .modal-content input[type="date"],
+#edit-event-modal .modal-content textarea { /* Targeting modal form inputs */
+    width: 95%; /* Slightly reduced width to account for padding */
+    padding: 12px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+#edit-event-modal .modal-content textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#edit-event-modal .modal-content button[type="submit"],
+#edit-event-modal .modal-content .cancel-button { /* Targeting modal form buttons */
+    background-color: cornflowerblue;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px; /* Added margin for button spacing */
+}
+
+#edit-event-modal .modal-content button[type="submit"]:hover {
+    background-color: #4169E1;
+    transform: scale(1.03);
+}
+
+#edit-event-modal .modal-content .cancel-button {
+    background-color: #ccc;
+    color: #333;
+}
+
+#edit-event-modal .modal-content .cancel-button:hover {
+    background-color: #aaa;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .athletes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .filter-buttons {
+        justify-content: space-around;
+        gap: 10px;
+    }
+     /* Adjust modal for smaller screens*/
+    .modal-content {
+        width: 95%; /* Take up more width on smaller screens */
+         padding: 25px; /* Slightly reduce modal padding */
+    }
+     .filter-buttons-container {
+        margin-bottom: 15px; /* Reduce margin on smaller screens */
+         padding: 12px 5%; /* Adjust padding on smaller screens */
+    }
+
+    .athlete-filter-section h2 {
+        font-size: 1.5rem; /* Adjust filter heading size on smaller screens */
+    }
+
+    .add-athlete-section h2, .add-event-form h2, #edit-event-modal .modal-content h2, #edit-athlete-modal .modal-content h2 {
+         font-size: 1.6rem; /* Adjust add athlete heading size */
+    }
+
+    #nav {
+        display: none;
+        position: absolute;
+        top: 160px; /* Adjust based on header height */
+        right: 0;
+        background-color: cornflowerblue;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        box-shadow: -2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    #nav.active {
+        display: block;
+    }
+
+    #nav li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start; /* Align logo and hamburger to the start */
+    }
+
+    header .logo {
+        margin-bottom: 10px; /* Add some space below the logo */
+    }
+    nav ul li {
+        margin-left: 0; /* Reset margin for mobile nav items */
+        padding: 10px 20px; /* Add padding for better touch area */
+        display: block; /* Ensure each nav item is on a new line */
+        text-align: left; /* Align text to the left in mobile nav */
+    }
+    .dropdown {
+        position: static; /* Position dropdown normally in mobile view */
+        display: none; /* Initially hide dropdown in mobile view */
+        background-color: rgb(70, 123, 222);
+        width: 100%;
+        box-shadow: none; /* Remove shadow for mobile dropdown */
+        border-radius: 0; /* Remove border-radius for mobile dropdown */
+    }
+
+    #nav li:hover .dropdown,
+    #nav li.dropdown-active .dropdown { /* Class to toggle dropdown visibility */
+        display: block; /* Show dropdown when parent li is hovered or active */
+    }
+
+    .dropdown li {
+        padding-left: 30px; /* Indent dropdown items */
+    }
+
+    .register {
+        margin-top: 15px; /* Add margin above the register button in mobile view */
+    }
+
+    .title-text {
+        font-size: 40px; /* Smaller title text on mobile */
+        height: auto; /* Adjust height to content */
+        padding: 50px 20px; /* Adjust padding for mobile */
+    }
+    #about {
+        flex-direction: column; /* Stack about section content vertically */
+    }
+
+    #about > img.basket, #about2, .sectionvid video#homevid {
+        width: 100%; /* Make images and video full width on mobile */
+        height: auto; /* Maintain aspect ratio */
+        margin: 20px 0; /* Adjust margins for mobile */
+    }
+    .cards, .discipline-container, .getcards, .container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center align items in cards */
+    }
+    .aboutimg {
+        width: 95%; /* Make about image full width on mobile */
+        margin: 10px auto; /* Center the image */
+        display: block; /* Ensure it behaves as a block element */
+    }
+    #about > p {
+        width: 95%; /* Make text width responsive */
+        margin: 15px auto; /* Center text block */
+    }
+    hr.tline, #aboutlist {
+        width: 95%; /* Make hr and list full width on mobile */
+    }
+    .training-bg {
+        height: auto; /* Adjust training background height */
+        padding-bottom: 30px; /* Add padding at the bottom */
+    }
+    .row.n1, .row.n2, .row.n3, .row.n4 {
+        width: 95%; /* Make rows full width on mobile */
+    }
+    .getinvolvebg {
+        height: auto; /* Adjust get involved background height */
+        padding: 80px 20px; /* Adjust padding for mobile */
+        text-align: center; /* Center text in mobile view */
+    }
+    .getinvolvebg p {
+        font-size: 60px; /* Adjust font size for mobile */
+        margin-left: 0; /* Reset left margin */
+    }
+    .getcontainer {
+        flex-direction: column; /* Stack get container content vertically */
+        align-items: center; /* Center align items */
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .getimage {
+        width: 80%; /* Make get image responsive */
+        margin-bottom: 20px; /* Add margin below image */
+    }
+    .getinfo {
+        width: 95%; /* Make text width responsive */
+    }
+    .image-slider {
+        max-width: 95%; /* Make slider responsive */
+    }
+    .form-box, .login-page {
+        width: 95%; /* Make form boxes responsive */
+        padding: 20px; /* Adjust padding for mobile */
+    }
+    .registration-benefits, .login-section, .form-section {
+        padding: 30px 0; /* Adjust section padding for mobile */
+    }
+    .khelo-india-footer .footer-container {
+        flex-direction: column; /* Stack footer sections vertically */
+        text-align: center; /* Center text in footer on mobile */
+    }
+    .khelo-india-footer .social-info, .khelo-india-footer .footer-menu {
+        align-items: center; /* Center align social info and menu */
+    }
+    .khelo-india-footer .social-icons {
+        justify-content: center; /* Center social icons */
+    }
+}

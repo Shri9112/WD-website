@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET INVOLVED</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- Include jQuery -->
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="logo" class="logo">
+        <nav>
+            <ul id="nav">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./discipline.html">Disciplines</a></li>
+                <li><a href="./khelon.html">Khelon</a></li>
+                <li><a href="./athlete.html">Athletes</a></li>
+                <li><a href="./events.html">Events</a></li>
+                <li>
+                    <a>Resources</a>
+                    <ul class="dropdown">
+                        <li><a href="resources\ParaGames2023.pdf">Khelo
+                                India Para Games 2023</a></li>
+                        <li><a
+                                href="resources\UniversityGames2023.pdf">Khelo
+                                India University Games 2023</a></li>
+                        <li><a href="resources\WinterGames2024.pdf">Khelo
+                                India Winter Games 2024</a></li>
+                        <li><a href="resources\YouthGames2023.pdf">Khelo
+                                India Youth Games 2023 2.0</a></li>
+                        <li><a href="resources\YouthGames20232.0.pdf">khelo
+                                India Youth Games 2023</a></li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+        <a href="./register.html" class="register"><button>Get
+                Involved</button></a>
+
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container form-box">
+                <form action="Registration" method="post">
+                    <h2>Register for Khelo India</h2>
+
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username"
+                        required>
+                    <span class="error-message" id="username-error"></span>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                    <span class="error-message" id="password-error"></span>
+                    <label for="mobile" name="mobile">Mobile</label>
+                    <input type="number" name="mobile" id="mobile" required>
+                    <span class="error-message" id="mobile-error"></span>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                    <input type="submit" value="Register" id="register">
+
+                    <p>Already Registered? <a href="login.html"
+                            id="login">Login</a></p>
+                </form>
+            </div>
+        </section>
+
+        <section class="registration-benefits">
+            <div class="container">
+                <h2>Why Register for Khelo India?</h2>
+                <ul>
+                    <li>Get access to exclusive training programs.</li>
+                    <li>Participate in national and state-level events.</li>
+                    <li>Connect with coaches and other athletes.</li>
+                    <li>Stay updated on the latest sports news and
+                        opportunities.</li>
+                    <!-- Add more benefits -->
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="khelo-india-footer">
+        <div class="footer-container">
+            <div class="social-info">
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><img
+                            src="images/fb.png"
+                            alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img
+                            src="images/twitter.webp"
+                            alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img
+                            src="images/insta.png"
+                            alt="Instagram"></a>
+                    <a href="#" class="social-icon"><img
+                            src="images/yt.webp"
+                            alt="YouTube"></a>
+                </div>
+                <div class="contact-info">
+                    <p>Tel No.: 01124364243</p>
+                    <p>Email id: kheloindia.div@gov.in</p>
+                </div>
+            </div>
+            <div class="footer-menu">
+                <a
+                    href="https://kheloindia.gov.in/privacypolicy.html">PRIVACY
+                    POLICY</a>
+            </div>
+
+        </div>
+        <div class="copyright-area">
+            <p>© Copyright Khelo India 2022. All Rights
+                Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function() { // Wrap your code in jQuery's document ready
+            $('.form-box form').submit(function(event) {
+                event.preventDefault();
+
+                // Get the form fields and error elements using jQuery
+                const username = $('#username').val().trim();
+                const password = $('#password').val().trim();
+                const mobile = $('#mobile').val().trim();
+                const email = $('#email').val().trim();
+
+                const usernameError = $('#username-error');
+                const passwordError = $('#password-error');
+                const mobileError = $('#mobile-error');
+                const emailError = $('#email-error');
+
+                // Reset error messages and classes using jQuery
+                usernameError.text('');
+                passwordError.text('');
+                mobileError.text('');
+                emailError.text('');
+
+                usernameError.removeClass('show');
+                passwordError.removeClass('show');
+                mobileError.removeClass('show');
+                emailError.removeClass('show');
+
+                let isValid = true;
+
+                if (username === '') {
+                    usernameError.text('Please enter a username.');
+                    usernameError.addClass('show');
+                    isValid = false;
+                }
+
+                if (password === '') {
+                    passwordError.text('Please enter a password.');
+                    passwordError.addClass('show');
+                    isValid = false;
+                } else if (password.length < 6) {
+                    passwordError.text('Password must be at least 6 characters long.');
+                    passwordError.addClass('show');
+                    isValid = false;
+                }
+
+                if (mobile === '') {
+                    mobileError.text('Please enter a mobile number.');
+                    mobileError.addClass('show');
+                    isValid = false;
+                } else if (!/^\d{10}$/.test(mobile)) {
+                    mobileError.text('Please enter a valid 10-digit mobile number.');
+                    mobileError.addClass('show');
+                    isValid = false;
+                }
+
+                if (email === '') {
+                    emailError.text('Please enter an email address.');
+                    emailError.addClass('show');
+                    isValid = false;
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    emailError.text('Please enter a valid email address.');
+                    emailError.addClass('show');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    // registrationForm.submit(); // If you want to submit using JS, use the jQuery way if needed
+                    alert('Form is valid and ready to be submitted.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HOME</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <header>
+
+            <img src="images/logo.svg" alt="logo" class="logo">
+            <div class="hamburger" onclick="toggleNav()">☰</div>
+            <nav>
+                <ul id="nav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./discipline.html">Disciplines</a></li>
+                    <li><a href="./khelon.html">Khelon</a></li>
+                    <li><a href="./athlete.html">Athletes</a></li>
+                    <li><a href="./events.html">Events</a></li>
+                    <li>
+                        <a>Resources</a>
+                        <ul class="dropdown">
+                            <li><a href="resources\ParaGames2023.pdf">Khelo
+                                    India Para Games 2023</a></li>
+                            <li><a
+                                    href="resources\UniversityGames2023.pdf">Khelo
+                                    India University Games 2023</a></li>
+                            <li><a href="resources\WinterGames2024.pdf">Khelo
+                                    India Winter Games 2024</a></li>
+                            <li><a href="resources\YouthGames2023.pdf">Khelo
+                                    India Youth Games 2023 2.0</a></li>
+                            <li><a href="resources\YouthGames20232.0.pdf">khelo
+                                    India Youth Games 2023</a></li>
+
+                        </ul>
+
+                    </nav>
+                    <a href="./register.html" class="register"><button>Get
+                            Involved</button></a>
+
+                </header>
+
+                <main>
+                    <section class="login-section">
+                        <div class="container login-page">
+                            <form id="loginForm" class="login-form">
+                                <h2>Login to Khelo India</h2>
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="username" required>
+            
+                                <label for="password">Password</label>
+                                <input type="password" id="password" required>
+            
+                                <input type="checkbox" id="isAdmin" name="isAdmin">
+                                <label for="isAdmin">Admin Login</label>
+            
+                                <button type="submit" id="login-button">Login</button>
+                                <p id="loginMessage"></p>
+                                <p>Not registered yet? <a href="./register.html" >Register here</a></p>
+                            </form>
+                        </div>
+                    </section>
+                </main>
+            
+                <footer class="khelo-india-footer">
+                     </footer>
+            
+                     <script>
+                        const loginForm = document.getElementById('loginForm');
+                        const loginMessage = document.getElementById('loginMessage');
+                
+                        loginForm.addEventListener('submit', function(event) {
+                            event.preventDefault();
+                
+                            const username = document.getElementById('username').value;
+                            const password = document.getElementById('password').value;
+                            const isAdmin = document.getElementById('isAdmin').checked;
+                
+                            // Basic check for demo (replace with server-side authentication in a real app)
+                            if (isAdmin && username === 'admin' && password === 'password') {
+                                localStorage.setItem('isLoggedIn', 'true');
+                                localStorage.setItem('isAdmin', 'true');
+                                loginMessage.textContent = 'Admin login successful!';
+                                loginMessage.style.color = 'green';
+                                window.location.href = './athlete.html';
+                            } else if (!isAdmin) { 
+                                // Check if user exists in localStorage (registered users)
+                                const registeredUsers = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+                                const user = registeredUsers.find(u => u.username === username && u.password === password);
+                                if (user) {
+                                    localStorage.setItem('isLoggedIn', 'true');
+                                    localStorage.setItem('isAdmin', 'false');
+                                    loginMessage.textContent = 'User login successful!';
+                                    loginMessage.style.color = 'green';
+                                    window.location.href = './athlete.html';
+                                } else {
+                                    loginMessage.textContent = 'Invalid username or password.';
+                                    loginMessage.style.color = 'red';
+                                }
+                            } else {
+                                loginMessage.textContent = 'Invalid username or password.';
+                                loginMessage.style.color = 'red';
+                            }
+                        });
+                    </script>
+                <footer class="khelo-india-footer">
+                    <div class="footer-container">
+                        <div class="social-info">
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><img
+                                        src="images/fb.png"
+                                        alt="Facebook"></a>
+                                <a href="#" class="social-icon"><img
+                                        src="images/twitter.webp"
+                                        alt="Twitter"></a>
+                                <a href="#" class="social-icon"><img
+                                        src="images/insta.png"
+                                        alt="Instagram"></a>
+                                <a href="#" class="social-icon"><img
+                                        src="images/yt.webp"
+                                        alt="YouTube"></a>
+                            </div>
+                            <div class="contact-info">
+                                <p>Tel No.: 01124364243</p>
+                                <p>Email id: kheloindia.div@gov.in</p>
+                            </div>
+                        </div>
+                        <div class="footer-menu">
+                            <a
+                                href="https://kheloindia.gov.in/privacypolicy.html">PRIVACY
+                                POLICY</a>
+                        </div>
+
+                    </div>
+                    <div class="copyright-area">
+                        <p>© Copyright Khelo India 2022. All Rights
+                            Reserved.</p>
+                    </div>
+                </footer>
+                <script>
+function toggleNav() {
+const nav = document.getElementById('nav');
+nav.classList.toggle('active');
+}
+</script>>
+            </body>
+        </html>
